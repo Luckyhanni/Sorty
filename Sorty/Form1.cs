@@ -599,6 +599,13 @@ namespace Sorty
                         {
                             botToken = config.DiscordToken;
                             channelId = config.ChannelId;
+
+                            // --- DEBUGGING START (Lösche dies, wenn es funktioniert!) ---
+                            // Zeige die ersten 5 Zeichen des Tokens an, um zu prüfen, ob es der NEUE ist.
+                            // NICHT screenshotten und hier posten! Nur für dich schauen!
+                            string tokenVorschau = botToken.Length > 5 ? botToken.Substring(0, 5) + "..." : "Zu kurz";
+                            MessageBox.Show($"Geladener Token Start: {tokenVorschau}\nPfad: {configPath}", "Debug Check");
+                            // --- DEBUGGING ENDE ---
                         }
                     }
                     else
